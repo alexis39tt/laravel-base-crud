@@ -13,10 +13,10 @@ class CreateComicTable extends Migration
      */
     public function up()
     {
-        Schema::create('comic', function (Blueprint $table) {
+        Schema::create('comics', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->longText('description');
             $table->string('thumb');
             $table->float('price');
             $table->string('series');
@@ -33,6 +33,6 @@ class CreateComicTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comic');
+        Schema::dropIfExists('comics');
     }
 }
